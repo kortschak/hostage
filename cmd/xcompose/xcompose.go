@@ -2,6 +2,8 @@
 // Use of this source code is governed by a BSD-style
 // license that can be found in the LICENSE file.
 
+// The xcompose command generates a DefaultKeyBindings.dict key binding map from an
+// X11 Compose definition file.
 package main
 
 //go:generate go run generate.go
@@ -39,7 +41,7 @@ func main() {
 	flag.Usage = func() {
 		fmt.Fprintf(flag.CommandLine.Output(), `Usage of %s: 
 
-xconfig generates a DefaultKeyBindings.dict key binding map from an X11 Compose
+xcompose generates a DefaultKeyBindings.dict key binding map from an X11 Compose
 definition file. Using the dict file depends on mapping a sensible modifier key
 to a character. This can be done with Karabiner-Elements. By default the AltGr
 key is mapped to '§'.
